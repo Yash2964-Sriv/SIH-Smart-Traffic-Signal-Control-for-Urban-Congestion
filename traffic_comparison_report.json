@@ -1,0 +1,36 @@
+{
+  "analysis_timestamp": "2025-09-10T13:45:40.250529",
+  "real_video_analysis": {
+    "total_vehicles": 829,
+    "duration": 20.086733333333335,
+    "avg_vehicles_per_frame": 47.59234608985025,
+    "traffic_flow_rate": 1426.3440386568507
+  },
+  "sumo_simulation": {
+    "total_vehicles": 25,
+    "avg_waiting_time": 8.5,
+    "avg_speed": 12.3,
+    "throughput": 180,
+    "efficiency_score": 87.5
+  },
+  "accuracy_metrics": {
+    "vehicle_count_accuracy": 52.52945495227773,
+    "flow_rate_accuracy": 12.619676257735208,
+    "timing_accuracy": 44.48678848233338,
+    "overall_pattern_accuracy": 36.54530656411544
+  },
+  "efficiency_improvements": {
+    "waiting_time_improvement": 37.75299219534184,
+    "throughput_improvement": 336.1413751507841,
+    "overall_efficiency": 186.94718367306297,
+    "efficiency_score": 87.5
+  },
+  "overall_assessment": {
+    "overall_accuracy": 36.54530656411544,
+    "overall_efficiency_improvement": 186.94718367306297,
+    "grade": "Needs Improvement",
+    "recommendations": [
+      "Improve traffic pattern replication accuracy"
+    ]
+  }
+}

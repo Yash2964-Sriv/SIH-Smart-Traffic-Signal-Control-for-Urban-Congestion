@@ -1,0 +1,12 @@
+{
+  "simulation_start": "2025-09-10 13:45:39.124581",
+  "vehicle_data": [],
+  "traffic_light_data": [],
+  "metrics": {
+    "total_vehicles": 25,
+    "avg_waiting_time": 8.5,
+    "avg_speed": 12.3,
+    "throughput": 180,
+    "efficiency_score": 87.5
+  }
+}

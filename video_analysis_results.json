@@ -1,0 +1,201 @@
+{
+  "vehicle_counts": [
+    {
+      "timestamp": 0.0,
+      "count": 52
+    },
+    {
+      "timestamp": 1.0010000000000001,
+      "count": 40
+    },
+    {
+      "timestamp": 2.0020000000000002,
+      "count": 48
+    },
+    {
+      "timestamp": 3.003,
+      "count": 42
+    },
+    {
+      "timestamp": 4.0040000000000004,
+      "count": 52
+    },
+    {
+      "timestamp": 5.005,
+      "count": 48
+    },
+    {
+      "timestamp": 6.006,
+      "count": 44
+    },
+    {
+      "timestamp": 7.007000000000001,
+      "count": 51
+    },
+    {
+      "timestamp": 8.008000000000001,
+      "count": 49
+    },
+    {
+      "timestamp": 9.009,
+      "count": 59
+    },
+    {
+      "timestamp": 10.01,
+      "count": 53
+    },
+    {
+      "timestamp": 11.011000000000001,
+      "count": 51
+    },
+    {
+      "timestamp": 12.012,
+      "count": 52
+    },
+    {
+      "timestamp": 13.013,
+      "count": 43
+    },
+    {
+      "timestamp": 14.014000000000001,
+      "count": 49
+    },
+    {
+      "timestamp": 15.015,
+      "count": 54
+    },
+    {
+      "timestamp": 16.016000000000002,
+      "count": 47
+    },
+    {
+      "timestamp": 17.017,
+      "count": 46
+    },
+    {
+      "timestamp": 18.018,
+      "count": 40
+    },
+    {
+      "timestamp": 19.019000000000002,
+      "count": 47
+    },
+    {
+      "timestamp": 20.02,
+      "count": 47
+    }
+  ],
+  "traffic_flows": [
+    {
+      "timestamp": 0.0,
+      "direction": "west"
+    },
+    {
+      "timestamp": 1.0010000000000001,
+      "direction": "north"
+    },
+    {
+      "timestamp": 2.0020000000000002,
+      "direction": "south"
+    },
+    {
+      "timestamp": 3.003,
+      "direction": "south"
+    },
+    {
+      "timestamp": 4.0040000000000004,
+      "direction": "north"
+    },
+    {
+      "timestamp": 5.005,
+      "direction": "east"
+    },
+    {
+      "timestamp": 6.006,
+      "direction": "south"
+    },
+    {
+      "timestamp": 7.007000000000001,
+      "direction": "east"
+    },
+    {
+      "timestamp": 8.008000000000001,
+      "direction": "north"
+    },
+    {
+      "timestamp": 9.009,
+      "direction": "south"
+    },
+    {
+      "timestamp": 10.01,
+      "direction": "north"
+    },
+    {
+      "timestamp": 11.011000000000001,
+      "direction": "west"
+    },
+    {
+      "timestamp": 12.012,
+      "direction": "north"
+    },
+    {
+      "timestamp": 13.013,
+      "direction": "north"
+    },
+    {
+      "timestamp": 14.014000000000001,
+      "direction": "west"
+    },
+    {
+      "timestamp": 15.015,
+      "direction": "west"
+    },
+    {
+      "timestamp": 16.016000000000002,
+      "direction": "west"
+    },
+    {
+      "timestamp": 17.017,
+      "direction": "east"
+    },
+    {
+      "timestamp": 18.018,
+      "direction": "east"
+    },
+    {
+      "timestamp": 19.019000000000002,
+      "direction": "north"
+    },
+    {
+      "timestamp": 20.02,
+      "direction": "west"
+    }
+  ],
+  "intersection_patterns": {
+    "main_road_priority": 0.7,
+    "turning_traffic": 0.3,
+    "peak_hour_multiplier": 2.5,
+    "vehicle_type_distribution": {
+      "car": 0.8,
+      "truck": 0.15,
+      "bus": 0.05
+    }
+  },
+  "timing_patterns": [],
+  "peak_hours": [
+    0.0,
+    2.0020000000000002,
+    4.0040000000000004,
+    5.005,
+    7.007000000000001,
+    8.008000000000001,
+    9.009,
+    10.01,
+    11.011000000000001,
+    12.012,
+    14.014000000000001,
+    15.015
+  ],
+  "vehicle_types": [],
+  "average_vehicles": 48.285714285714285
+}

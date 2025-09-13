@@ -1,0 +1,19 @@
+{
+  "simulation_summary": {
+    "total_duration": 199.9,
+    "total_steps": 2000,
+    "ai_control_percentage": 0.0
+  },
+  "traffic_metrics": {
+    "average_vehicles": 463.8185,
+    "maximum_vehicles": 821,
+    "efficiency": 56.49433617539585
+  },
+  "phase_analysis": {
+    "0": 2000
+  },
+  "ai_performance": {
+    "control_percentage": 0.0,
+    "decisions_made": 0
+  }
+}

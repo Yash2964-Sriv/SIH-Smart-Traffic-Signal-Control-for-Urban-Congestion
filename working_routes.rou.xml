@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/routes_file.xsd">
+  <!-- vTypes for different vehicle types -->
+  <vType id="car"   accel="1.8" decel="6.0" sigma="0.35" length="4" width="1.8" maxSpeed="16.67" guiShape="passenger" minGap="1.5" tau="1.2" lcStrategic="60" lcSpeedGain="40" lcKeepRight="0"/>
+  <vType id="bus"   accel="1.0" decel="5.5" sigma="0.35" length="12" width="2.5" maxSpeed="13.89" guiShape="bus" minGap="2.5" tau="1.6" lcStrategic="30" lcSpeedGain="20"/>
+  <vType id="truck" accel="0.7" decel="5.0" sigma="0.35" length="10" width="2.5" maxSpeed="12.0" guiShape="truck" minGap="2.5" tau="1.6" lcStrategic="30" lcSpeedGain="20"/>
+  <vType id="auto"  accel="1.5" decel="5.5" sigma="0.45" length="3" width="1.3" maxSpeed="14.0" guiShape="motorcycle" minGap="1.0" tau="1.0" lcStrategic="60" lcSpeedGain="40"/>
+  <vType id="bike"  accel="2.2" decel="5.0" sigma="0.45" length="2" width="0.8" maxSpeed="20.0" guiShape="motorcycle" minGap="0.9" tau="1.0" lcStrategic="70" lcSpeedGain="50"/>
+
+  <!-- Corrected route definitions based on actual network connections -->
+  <!-- South to North (straight) -->
+  <route id="S_to_N" edges="S_in S_out"/>
+  <!-- South to West (left turn) -->
+  <route id="S_to_W" edges="S_in W_out"/>
+  <!-- South to East (right turn) -->
+  <route id="S_to_E" edges="S_in E_out"/>
+
+  <!-- North to South (straight) -->
+  <route id="N_to_S" edges="N_in N_out"/>
+  <!-- North to East (left turn) -->
+  <route id="N_to_E" edges="N_in E_out"/>
+  <!-- North to West (right turn) -->
+  <route id="N_to_W" edges="N_in W_out"/>
+
+  <!-- East to West (straight) -->
+  <route id="E_to_W" edges="E_in E_out"/>
+  <!-- East to South (left turn) -->
+  <route id="E_to_S" edges="E_in S_out"/>
+  <!-- East to North (right turn) -->
+  <route id="E_to_N" edges="E_in N_out"/>
+
+  <!-- West to East (straight) -->
+  <route id="W_to_E" edges="W_in W_out"/>
+  <!-- West to North (left turn) -->
+  <route id="W_to_N" edges="W_in N_out"/>
+  <!-- West to South (right turn) -->
+  <route id="W_to_S" edges="W_in S_out"/>
+
+  <!-- Vehicle flows based on real video analysis (829 vehicles, 41.3 vehicles/min) -->
+  <!-- Southbound traffic -->
+  <flow id="S_straight" route="S_to_N" type="car" begin="0" end="3600" period="8.0" departLane="0" departSpeed="6.0"/>
+  <flow id="S_left" route="S_to_W" type="car" begin="0" end="3600" period="12.0" departLane="0" departSpeed="5.0"/>
+  <flow id="S_right" route="S_to_E" type="car" begin="0" end="3600" period="15.0" departLane="0" departSpeed="7.0"/>
+
+  <!-- Northbound traffic -->
+  <flow id="N_straight" route="N_to_S" type="car" begin="0" end="3600" period="9.0" departLane="0" departSpeed="6.0"/>
+  <flow id="N_left" route="N_to_E" type="car" begin="0" end="3600" period="13.0" departLane="0" departSpeed="5.0"/>
+  <flow id="N_right" route="N_to_W" type="car" begin="0" end="3600" period="16.0" departLane="0" departSpeed="7.0"/>
+
+  <!-- Eastbound traffic -->
+  <flow id="E_straight" route="E_to_W" type="car" begin="0" end="3600" period="10.0" departLane="0" departSpeed="6.0"/>
+  <flow id="E_left" route="E_to_S" type="car" begin="0" end="3600" period="14.0" departLane="0" departSpeed="5.0"/>
+  <flow id="E_right" route="E_to_N" type="car" begin="0" end="3600" period="17.0" departLane="0" departSpeed="7.0"/>
+
+  <!-- Westbound traffic -->
+  <flow id="W_straight" route="W_to_E" type="car" begin="0" end="3600" period="11.0" departLane="0" departSpeed="6.0"/>
+  <flow id="W_left" route="W_to_N" type="car" begin="0" end="3600" period="15.0" departLane="0" departSpeed="5.0"/>
+  <flow id="W_right" route="W_to_S" type="car" begin="0" end="3600" period="18.0" departLane="0" departSpeed="7.0"/>
+
+  <!-- Additional vehicle types for realism -->
+  <flow id="S_truck" route="S_to_N" type="truck" begin="0" end="3600" period="25.0" departLane="0" departSpeed="4.0"/>
+  <flow id="N_bus" route="N_to_S" type="bus" begin="0" end="3600" period="30.0" departLane="0" departSpeed="4.0"/>
+  <flow id="E_auto" route="E_to_W" type="auto" begin="0" end="3600" period="20.0" departLane="0" departSpeed="8.0"/>
+  <flow id="W_bike" route="W_to_E" type="bike" begin="0" end="3600" period="35.0" departLane="0" departSpeed="10.0"/>
+
+  <!-- Individual vehicles for immediate testing -->
+  <vehicle id="veh0" type="car" route="S_to_N" depart="0" />
+  <vehicle id="veh1" type="car" route="N_to_S" depart="2" />
+  <vehicle id="veh2" type="car" route="E_to_W" depart="4" />
+  <vehicle id="veh3" type="car" route="W_to_E" depart="6" />
+  <vehicle id="veh4" type="truck" route="S_to_W" depart="8" />
+  <vehicle id="veh5" type="bus" route="N_to_E" depart="10" />
+  <vehicle id="veh6" type="car" route="E_to_S" depart="12" />
+  <vehicle id="veh7" type="car" route="W_to_N" depart="14" />
+  <vehicle id="veh8" type="auto" route="S_to_E" depart="16" />
+  <vehicle id="veh9" type="bike" route="N_to_W" depart="18" />
+  <vehicle id="veh10" type="car" route="E_to_N" depart="20" />
+  <vehicle id="veh11" type="car" route="W_to_S" depart="22" />
+  <vehicle id="veh12" type="car" route="S_to_N" depart="24" />
+  <vehicle id="veh13" type="car" route="N_to_S" depart="26" />
+  <vehicle id="veh14" type="car" route="E_to_W" depart="28" />
+  <vehicle id="veh15" type="car" route="W_to_E" depart="30" />
+  <vehicle id="veh16" type="truck" route="S_to_W" depart="32" />
+  <vehicle id="veh17" type="bus" route="N_to_E" depart="34" />
+  <vehicle id="veh18" type="car" route="E_to_S" depart="36" />
+  <vehicle id="veh19" type="car" route="W_to_N" depart="38" />
+  <vehicle id="veh20" type="auto" route="S_to_E" depart="40" />
+  <vehicle id="veh21" type="bike" route="N_to_W" depart="42" />
+  <vehicle id="veh22" type="car" route="E_to_N" depart="44" />
+  <vehicle id="veh23" type="car" route="W_to_S" depart="46" />
+  <vehicle id="veh24" type="car" route="S_to_N" depart="48" />
+  <vehicle id="veh25" type="car" route="N_to_S" depart="50" />
+  <vehicle id="veh26" type="car" route="E_to_W" depart="52" />
+  <vehicle id="veh27" type="car" route="W_to_E" depart="54" />
+  <vehicle id="veh28" type="truck" route="S_to_W" depart="56" />
+  <vehicle id="veh29" type="bus" route="N_to_E" depart="58" />
+  <vehicle id="veh30" type="car" route="E_to_S" depart="60" />
+  <vehicle id="veh31" type="car" route="W_to_N" depart="62" />
+  <vehicle id="veh32" type="auto" route="S_to_E" depart="64" />
+  <vehicle id="veh33" type="bike" route="N_to_W" depart="66" />
+  <vehicle id="veh34" type="car" route="E_to_N" depart="68" />
+  <vehicle id="veh35" type="car" route="W_to_S" depart="70" />
+  <vehicle id="veh36" type="car" route="S_to_N" depart="72" />
+  <vehicle id="veh37" type="car" route="N_to_S" depart="74" />
+  <vehicle id="veh38" type="car" route="E_to_W" depart="76" />
+  <vehicle id="veh39" type="car" route="W_to_E" depart="78" />
+  <vehicle id="veh40" type="truck" route="S_to_W" depart="80" />
+  <vehicle id="veh41" type="bus" route="N_to_E" depart="82" />
+  <vehicle id="veh42" type="car" route="E_to_S" depart="84" />
+  <vehicle id="veh43" type="car" route="W_to_N" depart="86" />
+  <vehicle id="veh44" type="auto" route="S_to_E" depart="88" />
+  <vehicle id="veh45" type="bike" route="N_to_W" depart="90" />
+  <vehicle id="veh46" type="car" route="E_to_N" depart="92" />
+  <vehicle id="veh47" type="car" route="W_to_S" depart="94" />
+  <vehicle id="veh48" type="car" route="S_to_N" depart="96" />
+  <vehicle id="veh49" type="car" route="N_to_S" depart="98" />
+</routes>

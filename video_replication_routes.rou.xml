@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/routes_file.xsd">
+    <vType id="car" accel="1.8" decel="6.0" sigma="0.35" length="4" width="1.8" maxSpeed="16.67" guiShape="passenger" guiColor="0,0,1" minGap="1.5" tau="1.2"/>
+    
+    <!-- Routes based on video analysis -->
+    <route id="S_to_N" edges="south2center center2north"/>
+    <route id="S_to_E" edges="south2center center2east"/>
+    <route id="S_to_W" edges="south2center center2west"/>
+    <route id="N_to_S" edges="north2center center2south"/>
+    <route id="N_to_E" edges="north2center center2east"/>
+    <route id="N_to_W" edges="north2center center2west"/>
+    <route id="E_to_W" edges="east2center center2west"/>
+    <route id="E_to_N" edges="east2center center2north"/>
+    <route id="E_to_S" edges="east2center center2south"/>
+    <route id="W_to_E" edges="west2center center2east"/>
+    <route id="W_to_N" edges="west2center center2north"/>
+    <route id="W_to_S" edges="west2center center2south"/>
+    
+    <!-- Traffic flows based on video analysis -->
+    <flow id="S_through" route="S_to_N" type="car" begin="0" end="300" period="3.0" departLane="1" departSpeed="5.0"/>
+    <flow id="S_right" route="S_to_E" type="car" begin="0" end="300" period="4.0" departLane="2" departSpeed="5.0"/>
+    <flow id="S_left" route="S_to_W" type="car" begin="0" end="300" period="6.0" departLane="0" departSpeed="4.0"/>
+    
+    <flow id="N_through" route="N_to_S" type="car" begin="0" end="300" period="3.2" departLane="1" departSpeed="5.0"/>
+    <flow id="N_right" route="N_to_W" type="car" begin="0" end="300" period="4.2" departLane="2" departSpeed="5.0"/>
+    <flow id="N_left" route="N_to_E" type="car" begin="0" end="300" period="6.2" departLane="0" departSpeed="4.0"/>
+    
+    <flow id="E_through" route="E_to_W" type="car" begin="0" end="300" period="2.8" departLane="1" departSpeed="5.0"/>
+    <flow id="E_right" route="E_to_N" type="car" begin="0" end="300" period="3.8" departLane="2" departSpeed="5.0"/>
+    <flow id="E_left" route="E_to_S" type="car" begin="0" end="300" period="5.8" departLane="0" departSpeed="4.0"/>
+    
+    <flow id="W_through" route="W_to_E" type="car" begin="0" end="300" period="3.1" departLane="1" departSpeed="5.0"/>
+    <flow id="W_right" route="W_to_S" type="car" begin="0" end="300" period="4.1" departLane="2" departSpeed="5.0"/>
+    <flow id="W_left" route="W_to_N" type="car" begin="0" end="300" period="6.1" departLane="0" departSpeed="4.0"/>
+</routes>

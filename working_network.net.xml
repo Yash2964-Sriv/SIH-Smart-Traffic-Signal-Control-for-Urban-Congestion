@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='utf-8'?>
+<net version="1.9" junctionCornerDetail="5" limitTurnSpeed="5.5">
+  <location netOffset="0.00,0.00" convBoundary="0.00,0.00,100.00,100.00" origBoundary="-10000000000.00,-10000000000.00,10000000000.00,10000000000.00" projParameter="!" />
+  <edgeType id="highway" priority="1" numLanes="2" speed="13.89">
+    <laneType id="highway" speed="13.89" length="100.00" width="3.50" />
+  </edgeType>
+  <junction id="I1" x="50.00" y="50.00" type="traffic_light" incLanes="N1_to_I1_0 E1_to_I1_0" intLanes=":I1_0" shape="50.00,50.00" />
+  <junction id="N1" x="50.00" y="100.00" type="priority" incLanes="" intLanes="" shape="50.00,100.00" />
+  <junction id="S1" x="50.00" y="0.00" type="priority" incLanes="" intLanes="" shape="50.00,0.00" />
+  <junction id="E1" x="100.00" y="50.00" type="priority" incLanes="" intLanes="" shape="100.00,50.00" />
+  <junction id="W1" x="0.00" y="50.00" type="priority" incLanes="" intLanes="" shape="0.00,50.00" />
+  <edge id="N1_to_I1" from="N1" to="I1" priority="1" numLanes="2" speed="13.89">
+    <lane id="N1_to_I1_0" index="0" speed="13.89" length="50.00" width="3.50" shape="0.00,0.00 50.00,0.00" />
+  </edge>
+  <edge id="I1_to_S1" from="I1" to="S1" priority="1" numLanes="2" speed="13.89">
+    <lane id="I1_to_S1_0" index="0" speed="13.89" length="50.00" width="3.50" shape="0.00,0.00 50.00,0.00" />
+  </edge>
+  <edge id="E1_to_I1" from="E1" to="I1" priority="1" numLanes="2" speed="13.89">
+    <lane id="E1_to_I1_0" index="0" speed="13.89" length="50.00" width="3.50" shape="0.00,0.00 50.00,0.00" />
+  </edge>
+  <edge id="I1_to_W1" from="I1" to="W1" priority="1" numLanes="2" speed="13.89">
+    <lane id="I1_to_W1_0" index="0" speed="13.89" length="50.00" width="3.50" shape="0.00,0.00 50.00,0.00" />
+  </edge>
+  <edge id=":I1_0" from="I1" to="I1" priority="1" numLanes="1" speed="13.89">
+    <lane id=":I1_0" index="0" speed="13.89" length="0.00" width="3.50" shape="50.00,50.00 50.00,50.00" />
+  </edge>
+  <connection from="N1_to_I1" to="I1_to_S1" fromLane="0" toLane="0" dir="s" state="M" />
+  <connection from="E1_to_I1" to="I1_to_W1" fromLane="0" toLane="0" dir="l" state="M" />
+  <connection from="I1_to_S1" to="N1_to_I1" fromLane="0" toLane="0" dir="s" state="M" />
+  <connection from="I1_to_W1" to="E1_to_I1" fromLane="0" toLane="0" dir="l" state="M" />
+</net>
