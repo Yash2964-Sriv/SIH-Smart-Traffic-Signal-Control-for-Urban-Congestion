@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/sumoConfiguration.xsd">
+    <input>
+        <net-file value="corrected_intersection.net.xml"/>
+        <route-files value="test_routes.rou.xml"/>
+    </input>
+    <time>
+        <begin value="0"/>
+        <end value="300"/>
+        <step-length value="1"/>
+    </time>
+    <processing>
+        <ignore-route-errors value="1"/>
+        <ignore-junction-blocker value="1"/>
+    </processing>
+    <report>
+        <verbose value="1"/>
+        <no-step-log value="1"/>
+    </report>
+    <output>
+        <fcd-output value="simulation_fcd.xml"/>
+        <netstate-dump value="simulation_netstate.xml"/>
+    </output>
+</configuration>

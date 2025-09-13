@@ -1,0 +1,54 @@
+# Application Settings
+DEBUG=false
+ENVIRONMENT=production
+HOST=0.0.0.0
+PORT=8000
+
+# Database Configuration
+MONGODB_URL=mongodb://admin:traffic123@localhost:27017/traffic_simulator
+MONGODB_DATABASE=traffic_simulator
+
+# Redis Configuration
+REDIS_URL=redis://localhost:6379
+REDIS_DB=0
+
+# AI Configuration
+AI_MODEL_TYPE=PPO
+AI_LEARNING_RATE=0.0003
+AI_BATCH_SIZE=64
+AI_UPDATE_FREQUENCY=1000
+
+# SUMO Configuration
+SUMO_HOME=/usr/share/sumo
+SUMO_CONFIG_FILE=intersection.sumocfg
+SUMO_GUI=false
+SUMO_PORT=8813
+
+# Camera Configuration
+CAMERA_FPS=30
+CAMERA_RESOLUTION=1920x1080
+CAMERA_DETECTION_CONFIDENCE=0.5
+CAMERA_MODEL_PATH=models/yolov8n.pt
+
+# Intersection Configuration
+INTERSECTION_ID=main_intersection
+NUM_LANES=4
+YELLOW_DURATION=3
+RED_DURATION=2
+
+# Performance Metrics
+METRICS_UPDATE_INTERVAL=5
+METRICS_RETENTION_DAYS=30
+
+# Logging
+LOG_LEVEL=INFO
+LOG_FILE=logs/app.log
+
+# Security
+SECRET_KEY=your-super-secret-key-change-this-in-production
+ACCESS_TOKEN_EXPIRE_MINUTES=30
+
+# File Paths
+DATA_DIR=data
+MODELS_DIR=data/models
+LOGS_DIR=logs

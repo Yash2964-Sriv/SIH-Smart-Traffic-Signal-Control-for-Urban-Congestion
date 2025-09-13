@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<routes>
+    <vType id="car" accel="2.6" decel="4.5" sigma="0.5" length="5" maxSpeed="50"/>
+    <vType id="truck" accel="1.2" decel="3.5" sigma="0.3" length="12" maxSpeed="30"/>
+    
+    <route id="north_route" edges="north"/>
+    <route id="south_route" edges="south"/>
+    <route id="east_route" edges="east"/>
+    <route id="west_route" edges="west"/>
+    
+    <vehicle id="veh_0" type="truck" depart="0" route="north_route"/>
+    <vehicle id="veh_1" type="car" depart="2" route="south_route"/>
+    <vehicle id="veh_2" type="car" depart="4" route="east_route"/>
+    <vehicle id="veh_3" type="car" depart="6" route="west_route"/>
+    <vehicle id="veh_4" type="truck" depart="8" route="north_route"/>
+    <vehicle id="veh_5" type="car" depart="10" route="south_route"/>
+    <vehicle id="veh_6" type="car" depart="12" route="east_route"/>
+    <vehicle id="veh_7" type="car" depart="14" route="west_route"/>
+    <vehicle id="veh_8" type="truck" depart="16" route="north_route"/>
+    <vehicle id="veh_9" type="car" depart="18" route="south_route"/>
+    <vehicle id="veh_10" type="car" depart="20" route="east_route"/>
+    <vehicle id="veh_11" type="car" depart="22" route="west_route"/>
+    <vehicle id="veh_12" type="truck" depart="24" route="north_route"/>
+    <vehicle id="veh_13" type="car" depart="26" route="south_route"/>
+    <vehicle id="veh_14" type="car" depart="28" route="east_route"/>
+    <vehicle id="veh_15" type="car" depart="30" route="west_route"/>
+</routes>

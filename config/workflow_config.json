@@ -1,0 +1,61 @@
+{
+    "output_dir": "workflow_output",
+    "intersection": {
+        "lat": 28.6139,
+        "lon": 77.2090,
+        "radius": 100,
+        "name": "Delhi Intersection"
+    },
+    "camera": {
+        "enabled": false,
+        "url": "rtsp://localhost:8554/stream",
+        "model_path": "yolov8n.pt",
+        "fps": 30,
+        "resolution": [
+            1920,
+            1080
+        ]
+    },
+    "maps_api": {
+        "enabled": false,
+        "api_key": "your_api_key_here",
+        "provider": "google",
+        "rate_limit": 100
+    },
+    "ai": {
+        "model_path": "yolov8n.pt",
+        "device": "auto",
+        "confidence_threshold": 0.5,
+        "nms_threshold": 0.4
+    },
+    "sumo": {
+        "binary": "sumo",
+        "tools_path": null,
+        "gui": false,
+        "port": 8813
+    },
+    "simulation": {
+        "duration": 3600,
+        "step_length": 1,
+        "warmup_time": 300,
+        "vehicle_count": 100
+    },
+    "omniverse": {
+        "enabled": true,
+        "output_dir": "omniverse_output",
+        "scene_scale": 1.0,
+        "road_width": 3.5
+    },
+    "comparison": {
+        "enabled": true,
+        "output_dir": "comparison_output",
+        "generate_plots": true,
+        "statistical_tests": true
+    },
+    "logging": {
+        "level": "INFO",
+        "file": "smart_traffic_workflow.log",
+        "max_size": "10MB",
+        "backup_count": 5
+    }
+}
