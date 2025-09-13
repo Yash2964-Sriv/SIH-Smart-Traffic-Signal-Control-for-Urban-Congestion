@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<net version="1.9" junctionCornerDetail="5" limitTurnSpeed="5.5">
+    <location netOffset="0.00,0.00" convBoundary="0.00,0.00,200.00,200.00" origBoundary="-10000000000.00,-10000000000.00,10000000000.00,10000000000.00" projParameter="!" />
+    
+    <!-- Traffic light junction -->
+    <junction id="center" x="100.00" y="100.00" type="traffic_light" incLanes="north2center_0 south2center_0 east2center_0 west2center_0" intLanes=":center_0" shape="100.00,100.00" />
+    
+    <!-- Boundary junctions -->
+    <junction id="north" x="100.00" y="200.00" type="priority" incLanes="" intLanes="" shape="100.00,200.00" />
+    <junction id="south" x="100.00" y="0.00" type="priority" incLanes="" intLanes="" shape="100.00,0.00" />
+    <junction id="east" x="200.00" y="100.00" type="priority" incLanes="" intLanes="" shape="200.00,100.00" />
+    <junction id="west" x="0.00" y="100.00" type="priority" incLanes="" intLanes="" shape="0.00,100.00" />
+    
+    <!-- Edges -->
+    <edge id="north2center" from="north" to="center" priority="1" numLanes="1" speed="13.89">
+        <lane id="north2center_0" index="0" speed="13.89" length="100.00" width="3.50" shape="100.00,200.00 100.00,100.00" />
+    </edge>
+    
+    <edge id="center2south" from="center" to="south" priority="1" numLanes="1" speed="13.89">
+        <lane id="center2south_0" index="0" speed="13.89" length="100.00" width="3.50" shape="100.00,100.00 100.00,0.00" />
+    </edge>
+    
+    <edge id="east2center" from="east" to="center" priority="1" numLanes="1" speed="13.89">
+        <lane id="east2center_0" index="0" speed="13.89" length="100.00" width="3.50" shape="200.00,100.00 100.00,100.00" />
+    </edge>
+    
+    <edge id="center2west" from="center" to="west" priority="1" numLanes="1" speed="13.89">
+        <lane id="center2west_0" index="0" speed="13.89" length="100.00" width="3.50" shape="100.00,100.00 0.00,100.00" />
+    </edge>
+    
+    <!-- Internal edge for traffic light -->
+    <edge id=":center_0" from="center" to="center" priority="1" numLanes="1" speed="13.89">
+        <lane id=":center_0" index="0" speed="13.89" length="0.00" width="3.50" shape="100.00,100.00 100.00,100.00" />
+    </edge>
+    
+    <!-- Connections -->
+    <connection from="north2center" to="center2south" fromLane="0" toLane="0" dir="s" state="M" />
+    <connection from="east2center" to="center2west" fromLane="0" toLane="0" dir="l" state="M" />
+    <connection from="center2south" to="north2center" fromLane="0" toLane="0" dir="s" state="M" />
+    <connection from="center2west" to="east2center" fromLane="0" toLane="0" dir="l" state="M" />
+</net>

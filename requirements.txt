@@ -1,0 +1,67 @@
+# Core Python dependencies
+python-dotenv==1.0.0
+pydantic==2.5.0
+pydantic-settings==2.1.0
+
+# Web Framework
+fastapi==0.104.1
+uvicorn[standard]==0.24.0
+websockets==12.0
+
+# Database and Caching
+redis==5.0.1
+motor==3.3.2
+pymongo==4.6.0
+
+# AI and Machine Learning
+torch>=2.6.0
+torchvision>=0.17.0
+stable-baselines3>=2.1.0
+gymnasium>=0.29.1
+numpy>=1.24.3
+pandas>=2.1.4
+scikit-learn>=1.3.2
+
+# Computer Vision
+opencv-python==4.8.1.78
+ultralytics==8.0.196
+Pillow==10.1.0
+
+# Traffic Simulation
+sumolib==1.18.0
+traci==1.18.0
+
+# ROS 2 Integration
+rclpy==0.10.0
+ros2-msg==0.10.0
+
+# Data Processing
+pyyaml==6.0.1
+xmltodict==0.13.0
+requests==2.31.0
+aiohttp==3.9.1
+
+# Video Streaming
+ffmpeg-python==0.2.0
+av==10.0.0
+
+# Utilities
+tqdm==4.66.1
+matplotlib==3.8.2
+seaborn==0.13.0
+plotly==5.17.0
+
+# Development and Testing
+pytest==7.4.3
+pytest-asyncio==0.21.1
+black==23.11.0
+flake8==6.1.0
+mypy==1.7.1
+
+# Environment and Configuration
+python-multipart==0.0.6
+httpx==0.25.2
+
+# Optional: GPU support for PyTorch (uncomment if needed)
+# torch==2.1.1+cu118 --index-url https://download.pytorch.org/whl/cu118
+# torchvision==0.16.1+cu118 --index-url https://download.pytorch.org/whl/cu118

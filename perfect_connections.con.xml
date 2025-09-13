@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<connections xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/connections_file.xsd">
+    <connection from="north2center" to="center2south" fromLane="0" toLane="0" dir="s" state="M"/>
+    <connection from="north2center" to="center2east" fromLane="1" toLane="0" dir="r" state="M"/>
+    <connection from="north2center" to="center2west" fromLane="2" toLane="0" dir="l" state="M"/>
+    
+    <connection from="east2center" to="center2west" fromLane="0" toLane="0" dir="s" state="M"/>
+    <connection from="east2center" to="center2north" fromLane="1" toLane="0" dir="r" state="M"/>
+    <connection from="east2center" to="center2south" fromLane="2" toLane="0" dir="l" state="M"/>
+    
+    <connection from="south2center" to="center2north" fromLane="0" toLane="0" dir="s" state="M"/>
+    <connection from="south2center" to="center2east" fromLane="1" toLane="0" dir="r" state="M"/>
+    <connection from="south2center" to="center2west" fromLane="2" toLane="0" dir="l" state="M"/>
+    
+    <connection from="west2center" to="center2east" fromLane="0" toLane="0" dir="s" state="M"/>
+    <connection from="west2center" to="center2north" fromLane="1" toLane="0" dir="r" state="M"/>
+    <connection from="west2center" to="center2south" fromLane="2" toLane="0" dir="l" state="M"/>
+</connections>

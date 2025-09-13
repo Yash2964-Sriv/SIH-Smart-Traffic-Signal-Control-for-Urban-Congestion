@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2025-09-06 13:50:48 by Eclipse SUMO sumo Version 1.24.0
+<sumoConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/sumoConfiguration.xsd">
+
+    <input>
+        <net-file value="simple_network.net.xml"/>
+        <route-files value="simple_routes.rou.xml"/>
+    </input>
+
+    <output>
+        <netstate-dump value="simple_simulation_netstate.xml"/>
+        <fcd-output value="simple_simulation_fcd.xml"/>
+    </output>
+
+    <time>
+        <begin value="0"/>
+        <end value="10"/>
+        <step-length value="1"/>
+    </time>
+
+    <processing>
+        <ignore-junction-blocker value="1"/>
+        <ignore-route-errors value="1"/>
+    </processing>
+
+    <report>
+        <verbose value="1"/>
+        <no-step-log value="1"/>
+    </report>
+
+</sumoConfiguration>
+-->
+
+<fcd-export xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/fcd_file.xsd">
+    <timestep time="0.00"/>
+    <timestep time="1.00">
+        <vehicle id="veh_0" x="100.00" y="5.10" angle="0.00" type="car" speed="0.00" pos="5.10" lane="north_0" slope="0.00"/>
+    </timestep>
+    <timestep time="2.00">
+        <vehicle id="veh_0" x="100.00" y="6.54" angle="0.00" type="car" speed="1.44" pos="6.54" lane="north_0" slope="0.00"/>
+        <vehicle id="veh_1" x="100.00" y="194.90" angle="180.00" type="car" speed="0.00" pos="5.10" lane="south_0" slope="0.00"/>
+    </timestep>
+    <timestep time="3.00">
+        <vehicle id="veh_0" x="100.00" y="9.66" angle="0.00" type="car" speed="3.12" pos="9.66" lane="north_0" slope="0.00"/>
+        <vehicle id="veh_1" x="100.00" y="192.30" angle="180.00" type="car" speed="2.60" pos="7.70" lane="south_0" slope="0.00"/>
+        <vehicle id="veh_2" x="194.90" y="100.00" angle="270.00" type="car" speed="0.00" pos="5.10" lane="east_0" slope="0.00"/>
+    </timestep>
+    <timestep time="4.00">
+        <vehicle id="veh_0" x="100.00" y="15.31" angle="0.00" type="car" speed="5.66" pos="15.31" lane="north_0" slope="0.00"/>
+        <vehicle id="veh_1" x="100.00" y="187.51" angle="180.00" type="car" speed="4.79" pos="12.49" lane="south_0" slope="0.00"/>
+        <vehicle id="veh_2" x="193.15" y="100.00" angle="270.00" type="car" speed="1.75" pos="6.85" lane="east_0" slope="0.00"/>
+        <vehicle id="veh_3" x="5.10" y="100.00" angle="90.00" type="car" speed="0.00" pos="5.10" lane="west_0" slope="0.00"/>
+    </timestep>
+    <timestep time="5.00">
+        <vehicle id="veh_0" x="100.00" y="22.93" angle="0.00" type="car" speed="7.62" pos="22.93" lane="north_0" slope="0.00"/>
+        <vehicle id="veh_1" x="100.00" y="181.04" angle="180.00" type="car" speed="6.47" pos="18.96" lane="south_0" slope="0.00"/>
+        <vehicle id="veh_2" x="189.49" y="100.00" angle="270.00" type="car" speed="3.66" pos="10.51" lane="east_0" slope="0.00"/>
+        <vehicle id="veh_3" x="7.44" y="100.00" angle="90.00" type="car" speed="2.34" pos="7.44" lane="west_0" slope="0.00"/>
+        <vehicle id="veh_4" x="100.00" y="5.10" angle="0.00" type="car" speed="0.00" pos="5.10" lane="north_0" slope="0.00"/>
+    </timestep>
+    <timestep time="6.00">
+        <vehicle id="veh_0" x="100.00" y="32.38" angle="0.00" type="car" speed="9.45" pos="32.38" lane="north_0" slope="0.00"/>
+        <vehicle id="veh_1" x="100.00" y="172.82" angle="180.00" type="car" speed="8.22" pos="27.18" lane="south_0" slope="0.00"/>
+        <vehicle id="veh_2" x="183.75" y="100.00" angle="270.00" type="car" speed="5.75" pos="16.25" lane="east_0" slope="0.00"/>
+        <vehicle id="veh_3" x="11.22" y="100.00" angle="90.00" type="car" speed="3.78" pos="11.22" lane="west_0" slope="0.00"/>
+        <vehicle id="veh_4" x="100.00" y="7.64" angle="0.00" type="car" speed="2.54" pos="7.64" lane="north_0" slope="0.00"/>
+        <vehicle id="veh_5" x="100.00" y="194.90" angle="180.00" type="car" speed="0.00" pos="5.10" lane="south_0" slope="0.00"/>
+    </timestep>
+    <timestep time="7.00">
+        <vehicle id="veh_0" x="100.00" y="43.47" angle="0.00" type="car" speed="11.08" pos="43.47" lane="north_0" slope="0.00"/>
+        <vehicle id="veh_1" x="100.00" y="162.89" angle="180.00" type="car" speed="9.93" pos="37.11" lane="south_0" slope="0.00"/>
+        <vehicle id="veh_2" x="176.42" y="100.00" angle="270.00" type="car" speed="7.33" pos="23.58" lane="east_0" slope="0.00"/>
+        <vehicle id="veh_3" x="17.45" y="100.00" angle="90.00" type="car" speed="6.23" pos="17.45" lane="west_0" slope="0.00"/>
+        <vehicle id="veh_4" x="100.00" y="12.46" angle="0.00" type="car" speed="4.82" pos="12.46" lane="north_0" slope="0.00"/>
+        <vehicle id="veh_5" x="100.00" y="193.53" angle="180.00" type="car" speed="1.37" pos="6.47" lane="south_0" slope="0.00"/>
+    </timestep>
+    <timestep time="8.00">
+        <vehicle id="veh_0" x="100.00" y="56.44" angle="0.00" type="car" speed="12.98" pos="56.44" lane="north_0" slope="0.00"/>
+        <vehicle id="veh_1" x="100.00" y="150.74" angle="180.00" type="car" speed="12.14" pos="49.26" lane="south_0" slope="0.00"/>
+        <vehicle id="veh_2" x="167.49" y="100.00" angle="270.00" type="car" speed="8.92" pos="32.51" lane="east_0" slope="0.00"/>
+        <vehicle id="veh_3" x="25.55" y="100.00" angle="90.00" type="car" speed="8.09" pos="25.55" lane="west_0" slope="0.00"/>
+        <vehicle id="veh_4" x="100.00" y="18.92" angle="0.00" type="car" speed="6.45" pos="18.92" lane="north_0" slope="0.00"/>
+        <vehicle id="veh_5" x="100.00" y="190.57" angle="180.00" type="car" speed="2.96" pos="9.43" lane="south_0" slope="0.00"/>
+    </timestep>
+    <timestep time="9.00">
+        <vehicle id="veh_0" x="100.00" y="71.16" angle="0.00" type="car" speed="14.72" pos="71.16" lane="north_0" slope="0.00"/>
+        <vehicle id="veh_1" x="100.00" y="137.81" angle="180.00" type="car" speed="12.93" pos="62.19" lane="south_0" slope="0.00"/>
+        <vehicle id="veh_2" x="156.48" y="100.00" angle="270.00" type="car" speed="11.01" pos="43.52" lane="east_0" slope="0.00"/>
+        <vehicle id="veh_3" x="35.94" y="100.00" angle="90.00" type="car" speed="10.40" pos="35.94" lane="west_0" slope="0.00"/>
+        <vehicle id="veh_4" x="100.00" y="27.10" angle="0.00" type="car" speed="8.18" pos="27.10" lane="north_0" slope="0.00"/>
+        <vehicle id="veh_5" x="100.00" y="185.89" angle="180.00" type="car" speed="4.68" pos="14.11" lane="south_0" slope="0.00"/>
+    </timestep>
+</fcd-export>

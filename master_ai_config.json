@@ -1,0 +1,183 @@
+{
+    "learning_rate": 0.001,
+    "discount_factor": 0.95,
+    "epsilon": 0.1,
+    "epsilon_decay": 0.995,
+    "epsilon_min": 0.01,
+    "memory_size": 10000,
+    "batch_size": 32,
+    "target_update_frequency": 100,
+    "training_frequency": 4,
+    "video_path": "Traffic_videos/stock-footage-drone-shot-way-intersection.webm",
+    "model_save_path": "models/master_ai_model.pkl",
+    "experience_save_path": "data/experience_buffer.pkl",
+    "training_episodes": 100,
+    "evaluation_episodes": 10,
+    "save_frequency": 10,
+    "plot_frequency": 20,
+    "state_representation": {
+        "queue_lengths": {
+            "normalization_factor": 100.0,
+            "junctions": [
+                "I1",
+                "I2",
+                "I3",
+                "I4"
+            ]
+        },
+        "waiting_times": {
+            "normalization_factor": 60.0,
+            "junctions": [
+                "I1",
+                "I2",
+                "I3",
+                "I4"
+            ]
+        },
+        "flow_rates": {
+            "normalization_factor": 1000.0,
+            "directions": [
+                "north",
+                "south",
+                "east",
+                "west"
+            ]
+        },
+        "vehicle_counts": {
+            "normalization_factor": 50.0,
+            "directions": [
+                "north",
+                "south",
+                "east",
+                "west"
+            ]
+        },
+        "efficiency_scores": {
+            "normalization_factor": 100.0,
+            "metrics": [
+                "throughput",
+                "waiting_time",
+                "speed"
+            ]
+        }
+    },
+    "action_space": {
+        "actions": [
+            "change_phase",
+            "extend_green_time",
+            "reduce_cycle_time",
+            "coordinate_signals",
+            "emergency_priority",
+            "adaptive_timing",
+            "manage_queues",
+            "optimize_flow"
+        ],
+        "action_descriptions": {
+            "change_phase": "Change traffic light phase to next phase",
+            "extend_green_time": "Extend current green light duration",
+            "reduce_cycle_time": "Reduce overall cycle time",
+            "coordinate_signals": "Coordinate multiple traffic signals",
+            "emergency_priority": "Implement emergency vehicle priority",
+            "adaptive_timing": "Implement adaptive timing based on conditions",
+            "manage_queues": "Manage vehicle queues to prevent overflow",
+            "optimize_flow": "Optimize overall traffic flow"
+        }
+    },
+    "reward_function": {
+        "base_rewards": {
+            "queue_reduction": 10,
+            "waiting_time_reduction": 20,
+            "flow_rate_increase": 0.1
+        },
+        "action_rewards": {
+            "phase_change": 5,
+            "green_extension": 3,
+            "coordination": 8,
+            "emergency_priority": 15
+        },
+        "penalties": {
+            "long_queues": -10,
+            "long_waits": -15,
+            "failed_action": -10
+        }
+    },
+    "training_parameters": {
+        "max_episode_steps": 1000,
+        "early_stopping": {
+            "enabled": true,
+            "patience": 20,
+            "min_delta": 0.01
+        },
+        "learning_schedule": {
+            "lr_decay": 0.99,
+            "lr_decay_frequency": 50,
+            "min_lr": 0.0001
+        }
+    },
+    "evaluation_metrics": {
+        "efficiency_score": {
+            "weight": 0.3,
+            "description": "Overall traffic efficiency"
+        },
+        "accuracy_score": {
+            "weight": 0.3,
+            "description": "Action accuracy and success rate"
+        },
+        "stability_score": {
+            "weight": 0.2,
+            "description": "Consistency of performance"
+        },
+        "adaptability_score": {
+            "weight": 0.2,
+            "description": "Ability to adapt to different conditions"
+        }
+    },
+    "model_architecture": {
+        "type": "q_network",
+        "state_size": 20,
+        "action_size": 8,
+        "hidden_layers": [
+            {
+                "type": "dense",
+                "units": 64,
+                "activation": "relu"
+            },
+            {
+                "type": "dense",
+                "units": 32,
+                "activation": "relu"
+            },
+            {
+                "type": "dense",
+                "units": 8,
+                "activation": "linear"
+            }
+        ],
+        "optimizer": "adam",
+        "loss_function": "mse"
+    },
+    "data_processing": {
+        "video_analysis": {
+            "frame_rate": 30,
+            "detection_confidence": 0.5,
+            "tracking_method": "kalman_filter"
+        },
+        "state_preprocessing": {
+            "normalization": "min_max",
+            "feature_scaling": true,
+            "noise_reduction": true
+        }
+    },
+    "logging": {
+        "level": "INFO",
+        "log_file": "logs/master_ai_training.log",
+        "console_output": true,
+        "plot_generation": true
+    },
+    "hardware_requirements": {
+        "min_ram": "8GB",
+        "recommended_ram": "16GB",
+        "gpu_support": false,
+        "cpu_cores": 4
+    }
+}
