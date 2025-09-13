@@ -1,0 +1,10 @@
+{
+  "total_vehicles_processed": 49,
+  "average_queue_length": 66.4873949579832,
+  "average_efficiency_score": 13.277310924369749,
+  "ai_decisions_made": 119,
+  "model_episode_count": 119547037146038801333356,
+  "pkl_model_path": "ai_models/DDQL_Replay_600.pkl",
+  "simulation_duration": 11.9,
+  "timestamp": "2025-09-11T21:34:37.997069"
+}

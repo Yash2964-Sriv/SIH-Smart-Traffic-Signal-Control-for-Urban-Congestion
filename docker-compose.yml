@@ -1,0 +1,158 @@
+version: '3.8'
+
+services:
+  # Redis for real-time message queue
+  redis:
+    image: redis:7-alpine
+    container_name: traffic_redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    restart: unless-stopped
+
+  # MongoDB for data storage
+  mongodb:
+    image: mongo:7
+    container_name: traffic_mongodb
+    ports:
+      - "27017:27017"
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: admin
+      MONGO_INITDB_ROOT_PASSWORD: traffic123
+      MONGO_INITDB_DATABASE: traffic_simulator
+    volumes:
+      - mongodb_data:/data/db
+      - ./docker/mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js:ro
+    restart: unless-stopped
+
+  # FastAPI Backend
+  backend:
+    build:
+      context: .
+      dockerfile: docker/backend.Dockerfile
+    container_name: traffic_backend
+    ports:
+      - "8000:8000"
+    environment:
+      - REDIS_URL=redis://redis:6379
+      - MONGODB_URL=mongodb://admin:traffic123@mongodb:27017/
+      - ENVIRONMENT=production
+    volumes:
+      - ./backend:/app/backend
+      - ./data:/app/data
+    depends_on:
+      - redis
+      - mongodb
+    restart: unless-stopped
+
+  # Node.js Backend
+  node_backend:
+    build:
+      context: .
+      dockerfile: docker/node-backend.Dockerfile
+    container_name: traffic_node_backend
+    ports:
+      - "3001:3001"
+    environment:
+      - REDIS_URL=redis://redis:6379
+      - MONGODB_URL=mongodb://admin:traffic123@mongodb:27017/
+      - BACKEND_API_URL=http://backend:8000
+    volumes:
+      - ./backend:/app/backend
+    depends_on:
+      - redis
+      - mongodb
+      - backend
+    restart: unless-stopped
+
+  # React Frontend
+  frontend:
+    build:
+      context: .
+      dockerfile: docker/frontend.Dockerfile
+    container_name: traffic_frontend
+    ports:
+      - "3000:3000"
+    environment:
+      - REACT_APP_API_URL=http://localhost:3001
+      - REACT_APP_WS_URL=ws://localhost:3001
+    volumes:
+      - ./frontend:/app/frontend
+      - /app/frontend/node_modules
+    depends_on:
+      - node_backend
+    restart: unless-stopped
+
+  # SUMO Simulation
+  sumo:
+    build:
+      context: .
+      dockerfile: docker/sumo.Dockerfile
+    container_name: traffic_sumo
+    environment:
+      - REDIS_URL=redis://redis:6379
+      - BACKEND_API_URL=http://backend:8000
+    volumes:
+      - ./simulation:/app/simulation
+      - ./data:/app/data
+    depends_on:
+      - redis
+      - backend
+    restart: unless-stopped
+
+  # AI Controller
+  ai_controller:
+    build:
+      context: .
+      dockerfile: docker/ai-controller.Dockerfile
+    container_name: traffic_ai_controller
+    environment:
+      - REDIS_URL=redis://redis:6379
+      - BACKEND_API_URL=http://backend:8000
+      - SUMO_URL=http://sumo:8080
+    volumes:
+      - ./ai_controller:/app/ai_controller
+      - ./data:/app/data
+    depends_on:
+      - redis
+      - backend
+      - sumo
+    restart: unless-stopped
+
+  # Camera Integration
+  camera_integration:
+    build:
+      context: .
+      dockerfile: docker/camera-integration.Dockerfile
+    container_name: traffic_camera
+    environment:
+      - REDIS_URL=redis://redis:6379
+      - BACKEND_API_URL=http://backend:8000
+    volumes:
+      - ./camera_integration:/app/camera_integration
+      - ./data:/app/data
+    depends_on:
+      - redis
+      - backend
+    restart: unless-stopped
+
+  # NGINX Reverse Proxy
+  nginx:
+    image: nginx:alpine
+    container_name: traffic_nginx
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./docker/nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./docker/ssl:/etc/nginx/ssl:ro
+    depends_on:
+      - frontend
+      - node_backend
+      - backend
+    restart: unless-stopped
+
+volumes:
+  redis_data:
+  mongodb_data:

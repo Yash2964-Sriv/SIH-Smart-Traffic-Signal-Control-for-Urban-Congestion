@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/routes_file.xsd">
+    <vType id="ai_car" accel="3.0" decel="5.0" sigma="0.3" length="4.5" maxSpeed="60" 
+           minGap="1.5" tau="1.0" impatience="0.5" jmIgnoreFoeProb="0.1" jmIgnoreJunctionFoeProb="0.1"/>
+    <vehicle id="ai_veh0" type="ai_car" route="E1 W1" depart="0.00"/>
+    <vehicle id="ai_veh1" type="ai_car" route="E1 W1" depart="0.00"/>
+    <vehicle id="ai_veh2" type="ai_car" route="E1 W1" depart="0.00"/>
+    <vehicle id="ai_veh3" type="ai_car" route="E1 W1" depart="0.00"/>
+    <vehicle id="ai_veh4" type="ai_car" route="W1 E1" depart="0.00"/>
+    <vehicle id="ai_veh5" type="ai_car" route="E1 W1" depart="0.00"/>
+    <vehicle id="ai_veh6" type="ai_car" route="E1 W1" depart="0.00"/>
+    <vehicle id="ai_veh7" type="ai_car" route="E1 W1" depart="0.00"/>
+    <vehicle id="ai_veh8" type="ai_car" route="E1 W1" depart="0.00"/>
+    <vehicle id="ai_veh9" type="ai_car" route="W1 E1" depart="0.00"/>
+    <vehicle id="ai_veh10" type="ai_car" route="E1 W1" depart="0.00"/>
+    <vehicle id="ai_veh11" type="ai_car" route="E1 W1" depart="0.00"/>
+    <vehicle id="ai_veh12" type="ai_car" route="W1 E1" depart="0.00"/>
+    <vehicle id="ai_veh13" type="ai_car" route="E1 W1" depart="0.00"/>
+    <vehicle id="ai_veh14" type="ai_car" route="E1 W1" depart="0.00"/>
+    <vehicle id="ai_veh15" type="ai_car" route="E1 W1" depart="0.00"/>
+    <vehicle id="ai_veh16" type="ai_car" route="E1 W1" depart="0.00"/>
+    <vehicle id="ai_veh17" type="ai_car" route="W1 E1" depart="0.00"/>
+    <vehicle id="ai_veh18" type="ai_car" route="E1 W1" depart="0.00"/>
+    <vehicle id="ai_veh19" type="ai_car" route="W1 E1" depart="0.00"/>
+    <vehicle id="ai_veh20" type="ai_car" route="E1 W1" depart="0.00"/>
+    <vehicle id="ai_veh21" type="ai_car" route="E1 W1" depart="0.00"/>
+    <vehicle id="ai_veh22" type="ai_car" route="W1 E1" depart="0.00"/>
+    <vehicle id="ai_veh23" type="ai_car" route="E1 W1" depart="0.00"/>
+    <vehicle id="ai_veh24" type="ai_car" route="E1 W1" depart="0.00"/>
+    <vehicle id="ai_veh25" type="ai_car" route="E1 W1" depart="0.00"/>
+    <vehicle id="ai_veh26" type="ai_car" route="E1 W1" depart="0.00"/>
+    <vehicle id="ai_veh27" type="ai_car" route="W1 E1" depart="0.00"/>
+    <vehicle id="ai_veh28" type="ai_car" route="E1 W1" depart="0.00"/>
+    <vehicle id="ai_veh29" type="ai_car" route="E1 W1" depart="0.00"/>
+    <vehicle id="ai_veh30" type="ai_car" route="W1 E1" depart="0.00"/>
+    <vehicle id="ai_veh31" type="ai_car" route="E1 W1" depart="0.00"/>
+    <vehicle id="ai_veh32" type="ai_car" route="E1 W1" depart="0.00"/>
+    <vehicle id="ai_veh33" type="ai_car" route="E1 W1" depart="0.00"/>
+    <vehicle id="ai_veh34" type="ai_car" route="W1 E1" depart="0.00"/>
+    <vehicle id="ai_veh35" type="ai_car" route="E1 W1" depart="0.00"/>
+    <vehicle id="ai_veh36" type="ai_car" route="E1 W1" depart="0.00"/>
+    <vehicle id="ai_veh37" type="ai_car" route="E1 W1" depart="0.00"/>
+    <vehicle id="ai_veh38" type="ai_car" route="E1 W1" depart="0.00"/>
+    <vehicle id="ai_veh39" type="ai_car" route="W1 E1" depart="0.00"/>
+    <vehicle id="ai_veh40" type="ai_car" route="W1 E1" depart="0.00"/>
+    <vehicle id="ai_veh41" type="ai_car" route="E1 W1" depart="0.00"/>
+    <vehicle id="ai_veh42" type="ai_car" route="E1 W1" depart="0.00"/>
+    <vehicle id="ai_veh43" type="ai_car" route="E1 W1" depart="0.00"/>
+    <vehicle id="ai_veh44" type="ai_car" route="E1 W1" depart="0.00"/>
+    <vehicle id="ai_veh45" type="ai_car" route="E1 W1" depart="0.00"/>
+    <vehicle id="ai_veh46" type="ai_car" route="E1 W1" depart="0.00"/>
+    <vehicle id="ai_veh47" type="ai_car" route="E1 W1" depart="0.00"/>
+    <vehicle id="ai_veh48" type="ai_car" route="E1 W1" depart="0.00"/>
+    <vehicle id="ai_veh49" type="ai_car" route="W1 E1" depart="0.00"/>
+</routes>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/sumoConfiguration.xsd">
+    <input>
+        <net-file value="sumofiles/4_way.net.xml"/>
+        <route-files value="corrected_routes.rou.xml"/>
+    </input>
+
+    <time>
+        <begin value="0"/>
+        <end value="3600"/>
+    </time>
+
+    <traci_server>
+        <remote-port value="8813"/>
+    </traci_server>
+
+    <report>
+        <no-step-log value="true"/>
+    </report>
+</configuration>

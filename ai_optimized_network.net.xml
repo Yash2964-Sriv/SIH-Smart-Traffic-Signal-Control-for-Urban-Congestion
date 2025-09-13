@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<net version="1.9" junctionCornerDetail="5" limitTurnSpeed="5.5" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/net_file.xsd">
+    <location netOffset="0.00,0.00" convBoundary="0.00,0.00,200.00,200.00" origBoundary="-10000000000.00,-10000000000.00,10000000000.00,10000000000.00" projParameter="!"/>
+    
+    <!-- Nodes (Junctions) -->
+    <junction id="I1" type="traffic_light" x="100.00" y="100.00" incLanes="E1_0 W1_0 N1_0 S1_0" intLanes="" shape="100.00,90.00 110.00,100.00 100.00,110.00 90.00,100.00">
+        <request index="0" response="00" foes="00" cont="0"/>
+        <request index="1" response="00" foes="00" cont="0"/>
+        <request index="2" response="00" foes="00" cont="0"/>
+        <request index="3" response="00" foes="00" cont="0"/>
+    </junction>
+    
+    <!-- Edges -->
+    <edge id="E1" from="I1" to="I1" priority="1">
+        <lane id="E1_0" index="0" speed="15.0" length="120.00" shape="220.00,100.00 100.00,100.00"/>
+    </edge>
+    <edge id="W1" from="I1" to="I1" priority="1">
+        <lane id="W1_0" index="0" speed="15.0" length="120.00" shape="-20.00,100.00 100.00,100.00"/>
+    </edge>
+    <edge id="N1" from="I1" to="I1" priority="1">
+        <lane id="N1_0" index="0" speed="15.0" length="120.00" shape="100.00,-20.00 100.00,100.00"/>
+    </edge>
+    <edge id="S1" from="I1" to="I1" priority="1">
+        <lane id="S1_0" index="0" speed="15.0" length="120.00" shape="100.00,220.00 100.00,100.00"/>
+    </edge>
+    
+    <!-- Direct connections without internal lanes -->
+    <connection from="E1" to="W1" fromLane="0" toLane="0" dir="s" state="M"/>
+    <connection from="W1" to="E1" fromLane="0" toLane="0" dir="s" state="M"/>
+    <connection from="N1" to="S1" fromLane="0" toLane="0" dir="s" state="M"/>
+    <connection from="S1" to="N1" fromLane="0" toLane="0" dir="s" state="M"/>
+</net>

@@ -1,0 +1,32 @@
+{
+  "timestamp": "2025-09-11T19:30:26.111535",
+  "performance_data": {
+    "total_vehicles": 0,
+    "total_waiting_time": 0,
+    "ai_decisions": 1995,
+    "phase_changes": 30,
+    "efficiency_improvements": [],
+    "real_vs_ai_comparison": {
+      "real_traffic": {
+        "avg_waiting_time": 52.82786885245902,
+        "avg_vehicles": 21.131147540983605,
+        "flow_rate": 16.74754098360656,
+        "efficiency": 65.0,
+        "total_time_saved": 0
+      },
+      "ai_controlled": {
+        "avg_waiting_time": 0.0,
+        "avg_vehicles": 0,
+        "flow_rate": 0,
+        "efficiency": 0.0,
+        "total_time_saved": 52.82786885245902
+      }
+    }
+  },
+  "summary": {
+    "ai_decisions": 1995,
+    "phase_changes": 30,
+    "efficiency_improvement": -100.0,
+    "waiting_time_reduction": 100.0
+  }
+}
